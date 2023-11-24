@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            
+            $(".buttons").click(function(){
+                var filter = $(this).attr("data-filter")
+                if(filter == "all"){
+                    $(".box").show(400);
+                }else{
+                    $(".box").not("."+filter).hide(200);
+                    $(".box").filter("."+filter).show(400);
+                }
+            });
+        });
+            $(".dropdowncontent").hide();
+            $(".drop").click(function(){
+                $(this).next(".dropdowncontent").slideToggle("slow");
+            });
+    </script>
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <div class="sidebar">
+            <div class="exit" onclick=hideSidebar()>
+                <a href="#">
+                <i class='bx bx-x'></i>            
+                </a>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Home</button>
+            </div>
+    
+            <div class="dropdown">
+                <button class="drop">Restaurants
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <button class="drop">Recipes
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+    
+            <div class="dropdown">
+                <button class="drop">Today's Pick
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Breakfast</a>
+                    <a href="#">Lunch</a>
+                    <a href="#">Dinner</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="home">
+            <div class="dropdown">
+                <button class="drop">Home</button>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Restaurants
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Recipes
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Local Indonesian</a>
+                    <a href="#">Western</a>
+                    <a href="#">Asian</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="drop">Today's Pick
+                    <i class='bx bxs-down-arrow'></i>
+                </button>
+                <div class="dropdowncontent">
+                    <a href="#">Breakfast</a>
+                    <a href="#">Lunch</a>
+                    <a href="#">Dinner</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu" onclick=showSidebar()>
+            <a href="#">
+            <i class='bx bx-menu'></i>
+            </a>
+        </div>
+    </div>
+
+    <h1>Restaurants</h1>
+
+    <div class="gallery">
+        <ul class="controls">
+            <li class="buttons" data-filter="all">All</li>
+            <li class="buttons" data-filter="local">Local</li>
+            <li class="buttons" data-filter="western">Western</li>
+            <li class="buttons" data-filter="asian">Asian</li>
+        </ul>
+
+        <div class="image-container">
+            <div class="box local">
+                <a href="https://vionadjunaidy.github.io/HCI-Project-Restaurant-Page-Prototype/" class="image local">
+                    <img src="https://th.bing.com/th/id/R.390e470b34486635ec8b2a995fda2d99?rik=OneytGO%2fVierXA&riu=http%3a%2f%2fwww.pagisore.id%2fsites%2fdefault%2ffiles%2fExterior_1.jpg&ehk=GOjMSc8kHNqLNp%2fHrOBEnUdqbcKayzgKs4qOgGzu2I8%3d&risl=&pid=ImgRaw&r=0" alt="Pagi Sore">
+                    <h2>Pagi Sore</h2>
+                </a>
+            </div>
+
+            <div class="box local">
+                <a href="https://vionadjunaidy.github.io/HCI-Project-Restaurant-Page-Prototype/" class="image local">
+                    <img src="https://beautika-manado.com/wp-content/uploads/2021/08/about-pangpol1.jpg" alt="Beautika">
+                    <h2>Beautika</h2>
+                </a>
+            </div>
+
+            <div class="box local">
+                <a href="https://vionadjunaidy.github.io/HCI-Project-Restaurant-Page-Prototype/" class="image local">
+                    <img src="https://plaza-senayan.com/wordpress/wp-content/uploads/Leko-1200x674.jpg" alt="Warung Leko">
+                    <h2>Warung Leko</h2>
+                </a>
+            </div>
+
+            <div class="box western">
+                <a href="https://vionadjunaidy.github.io/HCI-Project-Restaurant-Page-Prototype/" class="image western">
+                    <img src="https://s1.stabroeknews.com/images/2017/10/burgerking.jpg" alt="Burger King">
+                    <h2>Burger King, FX Sudirman</h2>
+                </a>
+            </div>
+
+            <div class="box western">
+                <a href="https://vionadjunaidy.github.io/HCI-Project-Restaurant-Page-Prototype/" class="image western">
+                    <img src="https://4.bp.blogspot.com/-FA8qDnnw8v8/VEgJWVaYjII/AAAAAAAAUB8/6cNfADVQv14/s1600/5.jpg" alt="3 Wise Monkeys">
+                    <h2>3 Wise Monkeys, Senopati</h2>
+                </a>
+            </div>
+
+            <div class="box western">
+                <a href="https://vionadjunaidy.github.io/HCI-Project-Restaurant-Page-Prototype/" class="image western">
+                    <img src="https://manual.co.id/wp-content/uploads/2022/02/manual-oma-elly-pik-1-980x719.jpg" alt="Oma Elly Kitchen">
+                    <h2>Oma Elly Kitchen</h2>
+                </a>
+            </div>
+
+            <div class="box asian">
+                <a href="https://vionadjunaidy.github.io/HCI-Project-Restaurant-Page-Prototype/" class="image asian">
+                    <img src="https://4.bp.blogspot.com/-UJm23r3xMsg/WzJ5lkmQAXI/AAAAAAAAMQ4/120ucKVWBdEa0He7umOm_5pU7gaLvR1ZwCLcBGAs/s1600/DSCF1253.jpg" alt="Shu Guo Yin Xiang">
+                    <h2>Shu Guo Yin Xiang</h2>
+                </a>
+            </div>
+
+            <div class="box asian">
+                <a href="https://vionadjunaidy.github.io/HCI-Project-Restaurant-Page-Prototype/" class="image asian">
+                    <img src="https://plaza-senayan.com/wordpress/wp-content/uploads/Din-Tai-Fung-768x576.jpeg" alt="Din Tai Fung">
+                    <h2>Din Tai Fung</h2>
+                </a>
+            </div>
+
+            <div class="box asian">
+                <a href="https://vionadjunaidy.github.io/HCI-Project-Restaurant-Page-Prototype/" class="image asian">
+                    <img src="https://4.bp.blogspot.com/-LPKPyfHnlVY/UBuD-WWBW-I/AAAAAAAAA6w/DNaDp-iq-6E/s1600/front.jpg" alt="Ikkudo Ichi">
+                    <h2>Ikkudo Ichi</h2>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
